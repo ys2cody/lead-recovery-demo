@@ -1,0 +1,27 @@
+{
+  "name": "lead-recovery-automation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Secure lead webhook to CRM automation demo: signed webhooks, validation, idempotency, durable retries, simulated CRM and follow-ups.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env src/main.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node --env-file-if-exists=.env dist/main.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --test-reporter=spec \"tests/**/*.test.ts\"",
+    "send-lead": "node --env-file-if-exists=.env scripts/send-lead.ts",
+    "leads": "node --env-file-if-exists=.env src/cli.ts",
+    "verify": "sh scripts/verify.sh"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2"
+  }
+}

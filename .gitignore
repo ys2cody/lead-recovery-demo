@@ -1,0 +1,35 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.next/
+dist/
+*.log
+.DS_Store
+
+# Secrets
+*.pem
+*.key
+*.p12
+credentials*.json
+service-account*.json
+
+# Internal agency tooling: kept private, never published
+.claude/
+.claude-flow/
+.mcp.json
+CLAUDE.md
+docs/upwork-portfolio.md
+tests/pre-bash-hook.test.cjs
+
+# Local agent runtime data
+.swarm/
+ruvector.db
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.tmp
+
+# Local demo database
+data/
